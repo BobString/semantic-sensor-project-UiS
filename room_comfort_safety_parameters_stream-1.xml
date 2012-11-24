@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swe:DataStream xmlns:swe="http://www.opengis.net/swe/2.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="http://www.opengis.net/swe/2.0 ../swe.xsd">
+	<!-- -->
+	<swe:elementType name="room_comfort_security_current_data">
+				<swe:DataChoice>
+					<swe:label>Room Comfort and Security Parameters (Current)</swe:label>
+					<!-- -->
+        				<swe:item name="indoor_temperature">
+						<swe:DataRecord>
+							<swe:label>Indoor Temperature Measurement (Current)</swe:label>
+							<swe:field name="variable_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/variable_name">
+									<swe:label>Variable Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="sensor_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/sensor_name">
+									<swe:label>Sensor Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="time">
+								<swe:Time
+									definition="http://www.opengis.net/def/property/OGC/0/SamplingTime"
+									referenceFrame="http://www.opengis.net/def/trs/OGC/0/GPS">
+									<swe:uom
+										xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+									/>
+								</swe:Time>
+							</swe:field>
+							<swe:field name="indoor_temperature">
+								<swe:Quantity
+									definition="http://www.seeds-fp7.eu/parameters/indoor/air_temperature">
+									<swe:uom code="C"/>
+								</swe:Quantity>
+							</swe:field>
+						</swe:DataRecord>
+					</swe:item>
+					<!-- -->
+					<swe:item name="indoor_relative_humidity">
+						<swe:DataRecord>
+							<swe:label>Indoor Relative Humidity Measurement (Current)</swe:label>
+							<swe:field name="variable_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/variable_name">
+									<swe:label>Variable Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="sensor_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/sensor_name">
+									<swe:label>Sensor Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="time">
+								<swe:Time
+									definition="http://www.opengis.net/def/property/OGC/0/SamplingTime"
+									referenceFrame="http://www.opengis.net/def/trs/OGC/0/GPS">
+									<swe:uom
+										xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+									/>
+								</swe:Time>
+							</swe:field>
+							<swe:field name="indoor_relative_humidity">
+								<swe:Quantity
+									definition="http://www.seeds-fp7.eu/parameters/indoor/relative_humidity">
+									<swe:uom code="%"/>
+								</swe:Quantity>
+							</swe:field>
+						</swe:DataRecord>
+					</swe:item>
+					<!-- -->
+					<swe:item name="indoor_air_quality">
+						<swe:DataRecord>
+							<swe:label>Current Indoor Air Quality Measurement</swe:label>
+							<swe:field name="variable_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/variable_name">
+									<swe:label>Variable Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="sensor_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/sensor_name">
+									<swe:label>Sensor Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="time">
+								<swe:Time
+									definition="http://www.opengis.net/def/property/OGC/0/SamplingTime"
+									referenceFrame="http://www.opengis.net/def/trs/OGC/0/GPS">
+									<swe:uom
+										xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+									/>
+								</swe:Time>
+							</swe:field>
+							<swe:field name="indoor_air_quality">
+								<swe:Quantity definition="http://www.seeds-fp7.eu/parameters/indoor/air_quality">
+									<swe:uom code="%"/>
+								</swe:Quantity>
+							</swe:field>
+						</swe:DataRecord>
+					</swe:item>
+					<!-- -->
+					<swe:item name="indoor_lighting_level">
+						<swe:DataRecord>
+							<swe:label>Lighting Level Measurement (Current)</swe:label>
+							<swe:field name="variable_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/variable_name">
+									<swe:label>Variable Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="sensor_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/sensor_name">
+									<swe:label>Sensor Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="time">
+								<swe:Time
+									definition="http://www.opengis.net/def/property/OGC/0/SamplingTime"
+									referenceFrame="http://www.opengis.net/def/trs/OGC/0/GPS">
+									<swe:uom
+										xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+									/>
+								</swe:Time>
+							</swe:field>
+							<swe:field name="lighting_level">
+								<swe:Quantity definition="http://www.seeds-fp7.eu/parameters/indoor/lighting_level">
+									<swe:uom code="lx"/>
+								</swe:Quantity>
+							</swe:field>
+						</swe:DataRecord>
+					</swe:item>
+					<!-- -->
+					<swe:item name="indoor_air_flow">
+						<swe:DataRecord>
+							<swe:label>Air Flow Measurement (Current)</swe:label>
+							<swe:field name="variable_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/variable_name">
+									<swe:label>Variable Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="sensor_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/sensor_name">
+									<swe:label>Sensor Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="time">
+								<swe:Time
+									definition="http://www.opengis.net/def/property/OGC/0/SamplingTime"
+									referenceFrame="http://www.opengis.net/def/trs/OGC/0/GPS">
+									<swe:uom
+										xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+									/>
+								</swe:Time>
+							</swe:field>
+							<swe:field name="air_flow">
+								<swe:Quantity definition="http://www.seeds-fp7.eu/parameters/indoor/air_flow">
+									<swe:uom code="L/s"/>
+								</swe:Quantity>
+							</swe:field>
+						</swe:DataRecord>
+					</swe:item>
+					<!-- -->
+					<swe:item name="indoor_motion">
+						<swe:DataRecord>
+							<swe:label>Indoor Motion Detection (Current)</swe:label>
+							<swe:field name="variable_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/variable_name">
+									<swe:label>Variable Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="sensor_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/sensor_name">
+									<swe:label>Sensor Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="time">
+								<swe:Time
+									definition="http://www.opengis.net/def/property/OGC/0/SamplingTime"
+									referenceFrame="http://www.opengis.net/def/trs/OGC/0/GPS">
+									<swe:uom
+										xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+									/>
+								</swe:Time>
+							</swe:field>
+							<swe:field name="motion_detection">
+								<swe:Boolean definition="http://www.seeds-fp7.eu/parameters/indoor/motion">
+									<swe:label>Motion Detected</swe:label>
+									<swe:description>True when motion was detected</swe:description>
+								</swe:Boolean>
+							</swe:field>
+						</swe:DataRecord>
+					</swe:item>
+					<!-- -->
+					<swe:item name="indoor_smoke_fire">
+						<swe:DataRecord>
+							<swe:label>Indoor Smoke/Fire Detection (Current)</swe:label>
+							<swe:field name="variable_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/variable_name">
+									<swe:label>Variable Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="sensor_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/sensor_name">
+									<swe:label>Sensor Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="time">
+								<swe:Time
+									definition="http://www.opengis.net/def/property/OGC/0/SamplingTime"
+									referenceFrame="http://www.opengis.net/def/trs/OGC/0/GPS">
+									<swe:uom
+										xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+									/>
+								</swe:Time>
+							</swe:field>
+							<swe:field name="smoke_fire_detection">
+								<swe:Boolean definition="http://www.seeds-fp7.eu/parameters/indoor/smoke_fire">
+									<swe:label>Smoke/Fire Detected</swe:label>
+									<swe:description>True when Smoke/Fire was detected</swe:description>
+								</swe:Boolean>
+							</swe:field>
+						</swe:DataRecord>
+					</swe:item>
+					<!-- -->
+					<swe:item name="indoor_window_contact">
+						<swe:DataRecord>
+							<swe:label>Window Contact Detection  (Current)</swe:label>
+							<swe:field name="variable_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/variable_name">
+									<swe:label>Variable Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="sensor_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/sensor_name">
+									<swe:label>Sensor Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="time">
+								<swe:Time
+									definition="http://www.opengis.net/def/property/OGC/0/SamplingTime"
+									referenceFrame="http://www.opengis.net/def/trs/OGC/0/GPS">
+									<swe:uom
+										xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+									/>
+								</swe:Time>
+							</swe:field>
+							<swe:field name="window_contact_detection">
+								<swe:Boolean definition="http://www.seeds-fp7.eu/parameters/indoor/window_contact">
+									<swe:label>Window Contact Detected</swe:label>
+									<swe:description>True when Window Contact was detected</swe:description>
+								</swe:Boolean>
+							</swe:field>
+						</swe:DataRecord>
+					</swe:item>
+					<!-- -->
+					<swe:item name="indoor_door_contact">
+						<swe:DataRecord>
+							<swe:label>Door Contact Detection (Current)</swe:label>
+							<swe:field name="variable_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/variable_name">
+									<swe:label>Variable Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="sensor_name">
+								<swe:Text definition="http://www.seeds-fp7.eu/parameters/sensor_name">
+									<swe:label>Sensor Name</swe:label>
+								</swe:Text>
+							</swe:field>
+							<swe:field name="time">
+								<swe:Time
+									definition="http://www.opengis.net/def/property/OGC/0/SamplingTime"
+									referenceFrame="http://www.opengis.net/def/trs/OGC/0/GPS">
+									<swe:uom
+										xlink:href="http://www.opengis.net/def/uom/ISO-8601/0/Gregorian"
+									/>
+								</swe:Time>
+							</swe:field>
+							<swe:field name="door_contact_detection">
+								<swe:Boolean definition="http://www.seeds-fp7.eu/parameters/indoor/door_contact">
+									<swe:label>Door Contact Detected</swe:label>
+									<swe:description>True when Door Contact was detected</swe:description>
+								</swe:Boolean>
+							</swe:field>
+						</swe:DataRecord>
+					</swe:item>
+					<!-- -->
+				</swe:DataChoice>
+     </swe:elementType>
+     <!-- -->
+     <swe:encoding>
+                <swe:TextEncoding tokenSeparator="," blockSeparator="\n" decimalSeparator="."/>
+     </swe:encoding>
+     <!-- -->
+     <swe:values>
+            indoor_temperature,office07/curr_temp_01,office07/sens_temp_01,2012-10-11T11:15+0100,25.5
+            indoor_relative_humidity,office07/curr_hum_01,office07/sens_hum_01,2012-10-11T11:17+0100,84
+            indoor_air_quality,office07/curr_air_01,office07/sens_air_01,2012-10-11T11:17+0100,0.05
+            indoor_lighting_level,office07/curr_bright_01,office07/sens_bright_01,2012-10-11T11:20+0100,500
+            indoor_motion,office07/curr_mot_01,office07/sens_mot_01,2012-10-11T11:20+0100,true
+            indoor_smoke_fire,office07/curr_smok_01,office07/sens_smok_01,2012-10-11T11:20+0100,false
+     </swe:values>
+     <!-- -->
+</swe:DataStream>

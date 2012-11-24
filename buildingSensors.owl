@@ -1,0 +1,584 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     ontologyIRI="http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Declaration>
+        <Class IRI="#DataRecord"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Equipment"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Variable"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#datarecord"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#location"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#theoricalVariable"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#country"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#equipmentType"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#placeDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#placeID"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#timestamp"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#unit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#variableDescription"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#variableMetric"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#variableSymbol"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#variableTag"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#variableType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ATer"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CLP-ER-i"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RADIATOR001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ROOM001"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SHM-ER"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SLP-ER(pi)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Th-er"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Th-er,max"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Th-er,min"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TroomAir(db)"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#per"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ter"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#DataRecord"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Equipment"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Place"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Variable"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#ATer"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#CLP-ER-i"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Equipment"/>
+        <NamedIndividual IRI="#RADIATOR001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Place"/>
+        <NamedIndividual IRI="#ROOM001"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#SHM-ER"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#SLP-ER(pi)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#Th-er"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#Th-er,max"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#Th-er,min"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#TroomAir(db)"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#per"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Variable"/>
+        <NamedIndividual IRI="#ter"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#location"/>
+        <NamedIndividual IRI="#RADIATOR001"/>
+        <NamedIndividual IRI="#ROOM001"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#theoricalVariable"/>
+        <NamedIndividual IRI="#RADIATOR001"/>
+        <NamedIndividual IRI="#CLP-ER-i"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#theoricalVariable"/>
+        <NamedIndividual IRI="#RADIATOR001"/>
+        <NamedIndividual IRI="#Th-er,max"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#theoricalVariable"/>
+        <NamedIndividual IRI="#RADIATOR001"/>
+        <NamedIndividual IRI="#Th-er,min"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#theoricalVariable"/>
+        <NamedIndividual IRI="#RADIATOR001"/>
+        <NamedIndividual IRI="#per"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#theoricalVariable"/>
+        <NamedIndividual IRI="#RADIATOR001"/>
+        <NamedIndividual IRI="#ATer"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#theoricalVariable"/>
+        <NamedIndividual IRI="#RADIATOR001"/>
+        <NamedIndividual IRI="#Th-er"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#theoricalVariable"/>
+        <NamedIndividual IRI="#RADIATOR001"/>
+        <NamedIndividual IRI="#ter"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#theoricalVariable"/>
+        <NamedIndividual IRI="#RADIATOR001"/>
+        <NamedIndividual IRI="#SLP-ER(pi)"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#theoricalVariable"/>
+        <NamedIndividual IRI="#RADIATOR001"/>
+        <NamedIndividual IRI="#TroomAir(db)"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#theoricalVariable"/>
+        <NamedIndividual IRI="#RADIATOR001"/>
+        <NamedIndividual IRI="#SHM-ER"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableDescription"/>
+        <NamedIndividual IRI="#ATer"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hysteresis to turn on/off other level of power</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableSymbol"/>
+        <NamedIndividual IRI="#ATer"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">\Delta T_{ER}</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableType"/>
+        <NamedIndividual IRI="#ATer"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">user</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableDescription"/>
+        <NamedIndividual IRI="#CLP-ER-i"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Electrical power of each level of power</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableSymbol"/>
+        <NamedIndividual IRI="#CLP-ER-i"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">C_{LP-ER-i}</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableType"/>
+        <NamedIndividual IRI="#CLP-ER-i"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">user</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#equipmentType"/>
+        <NamedIndividual IRI="#RADIATOR001"/>
+        <Literal datatypeIRI="&rdfs;Literal">ELECTRIC RADIATORS</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#country"/>
+        <NamedIndividual IRI="#ROOM001"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Stavanger</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#placeDescription"/>
+        <NamedIndividual IRI="#ROOM001"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Room in the 4 floor</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#placeID"/>
+        <NamedIndividual IRI="#ROOM001"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">001</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableDescription"/>
+        <NamedIndividual IRI="#SHM-ER"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">On/off radiators</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableMetric"/>
+        <NamedIndividual IRI="#SHM-ER"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">specific.control.electric_radiators.on_off_radiators</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableSymbol"/>
+        <NamedIndividual IRI="#SHM-ER"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">S_{HM-ER}</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableTag"/>
+        <NamedIndividual IRI="#SHM-ER"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">box, building, floor, room</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableType"/>
+        <NamedIndividual IRI="#SHM-ER"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">controlled</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableDescription"/>
+        <NamedIndividual IRI="#SLP-ER(pi)"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Level of power</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableMetric"/>
+        <NamedIndividual IRI="#SLP-ER(pi)"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">specific.control.electric_radiators.level_of_power</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableSymbol"/>
+        <NamedIndividual IRI="#SLP-ER(pi)"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">S_{LP-ER} (p1,…,p5)</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableTag"/>
+        <NamedIndividual IRI="#SLP-ER(pi)"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">box, building, floor, room</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableType"/>
+        <NamedIndividual IRI="#SLP-ER(pi)"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">controlled</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableDescription"/>
+        <NamedIndividual IRI="#Th-er"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Set point temperature</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableSymbol"/>
+        <NamedIndividual IRI="#Th-er"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">T_{H-ER}</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableType"/>
+        <NamedIndividual IRI="#Th-er"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">user</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableDescription"/>
+        <NamedIndividual IRI="#Th-er,max"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hysteresis over set point</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableSymbol"/>
+        <NamedIndividual IRI="#Th-er,max"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">T_{H-ER, MAX}</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableType"/>
+        <NamedIndividual IRI="#Th-er,max"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">user</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableDescription"/>
+        <NamedIndividual IRI="#Th-er,min"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Hysteresis down set point</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableSymbol"/>
+        <NamedIndividual IRI="#Th-er,min"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">T_{H-ER, MIN}</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableType"/>
+        <NamedIndividual IRI="#Th-er,min"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">user</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableDescription"/>
+        <NamedIndividual IRI="#TroomAir(db)"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Indoor air temperature</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableMetric"/>
+        <NamedIndividual IRI="#TroomAir(db)"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">general.indoor.air_temp</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableSymbol"/>
+        <NamedIndividual IRI="#TroomAir(db)"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">T_{room air (db)}</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableTag"/>
+        <NamedIndividual IRI="#TroomAir(db)"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">box, building, floor, room</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableType"/>
+        <NamedIndividual IRI="#TroomAir(db)"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">monitored</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableDescription"/>
+        <NamedIndividual IRI="#per"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Number of level of power</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableSymbol"/>
+        <NamedIndividual IRI="#per"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">P_{ER}</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableType"/>
+        <NamedIndividual IRI="#per"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">user</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableDescription"/>
+        <NamedIndividual IRI="#ter"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Sample time to change level of power
+</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableSymbol"/>
+        <NamedIndividual IRI="#ter"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">t_{ER}</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#variableType"/>
+        <NamedIndividual IRI="#ter"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">user</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#datarecord"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#datarecord"/>
+            <Class IRI="#Equipment"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#location"/>
+            <Class IRI="#Equipment"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#theoricalVariable"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#theoricalVariable"/>
+            <Class IRI="#DataRecord"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#datarecord"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#datarecord"/>
+            <Class IRI="#DataRecord"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#location"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#location"/>
+            <Class IRI="#Place"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#theoricalVariable"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#theoricalVariable"/>
+            <Class IRI="#Variable"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#placeID"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#country"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#equipmentType"/>
+        <Class IRI="#Equipment"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#placeDescription"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#placeID"/>
+        <Class IRI="#Place"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#timestamp"/>
+        <Class IRI="#DataRecord"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#unit"/>
+        <Class IRI="#DataRecord"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#value"/>
+        <Class IRI="#DataRecord"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#variableDescription"/>
+        <Class IRI="#Variable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#variableMetric"/>
+        <Class IRI="#Variable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#variableSymbol"/>
+        <Class IRI="#Variable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#variableTag"/>
+        <Class IRI="#Variable"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#variableType"/>
+        <Class IRI="#Variable"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#country"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#equipmentType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#placeDescription"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#placeID"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#timestamp"/>
+        <Datatype abbreviatedIRI="xsd:dateTimeStamp"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#unit"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#value"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#variableDescription"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#variableMetric"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#variableSymbol"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#variableTag"/>
+        <Datatype abbreviatedIRI="rdfs:Literal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#variableType"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
