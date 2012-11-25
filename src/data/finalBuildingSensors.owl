@@ -1,0 +1,700 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY Ontology1352127234683 "http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#" >
+    <!ENTITY Th-er "http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#Th-er," >
+    <!ENTITY TH-ERH "http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#TH-ERH," >
+]>
+
+
+<rdf:RDF xmlns="http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#"
+     xml:base="http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl"
+     xmlns:Ontology1352127234683="http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:Th-er="&Ontology1352127234683;Th-er,"
+     xmlns:TH-ERH="&Ontology1352127234683;TH-ERH,"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#dataChoice -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1352127234683;dataChoice">
+        <rdfs:range rdf:resource="&Ontology1352127234683;DataChoice"/>
+        <rdfs:domain rdf:resource="&Ontology1352127234683;elemType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#datarecord -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1352127234683;datarecord">
+        <rdfs:range rdf:resource="&Ontology1352127234683;DataRecord"/>
+        <rdfs:domain rdf:resource="&Ontology1352127234683;item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#item -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1352127234683;item">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;DataChoice"/>
+        <rdfs:range rdf:resource="&Ontology1352127234683;item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#location -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1352127234683;location">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1352127234683;location"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1352127234683;Place"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1352127234683;location"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1352127234683;item"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#theorical_variable -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1352127234683;theorical_variable">
+        <rdfs:range rdf:resource="&Ontology1352127234683;Variable"/>
+        <rdfs:domain rdf:resource="&Ontology1352127234683;item"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#variable_name -->
+
+    <owl:ObjectProperty rdf:about="&Ontology1352127234683;variable_name">
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1352127234683;variable_name"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1352127234683;Variable"/>
+            </owl:Restriction>
+        </rdfs:range>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&Ontology1352127234683;variable_name"/>
+                <owl:someValuesFrom rdf:resource="&Ontology1352127234683;DataRecord"/>
+            </owl:Restriction>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#country -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;country">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;Place"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&rdfs;Literal"/>
+                    <rdf:Description rdf:about="&xsd;string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#dataRecordTag -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;dataRecordTag">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;DataRecord"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#equipmentType -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;equipmentType">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;item"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#name -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;name">
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&Ontology1352127234683;DataChoice"/>
+                    <rdf:Description rdf:about="&Ontology1352127234683;DataRecord"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#placeDescription -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;placeDescription">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;Place"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#placeID -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;placeID">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;Place"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+        <rdfs:subPropertyOf rdf:resource="&owl;topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#quantity -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;quantity">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;DataRecord"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#sensor_name -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;sensor_name">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;DataRecord"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#timestamp -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;timestamp">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;DataRecord"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#unit -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;unit">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;DataRecord"/>
+        <rdfs:range rdf:resource="&rdfs;Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#variableDescription -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;variableDescription">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;Variable"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&rdfs;Literal"/>
+                    <rdf:Description rdf:about="&xsd;string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#variableMetric -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;variableMetric">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;Variable"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&rdfs;Literal"/>
+                    <rdf:Description rdf:about="&xsd;string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#variableSymbol -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;variableSymbol">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;Variable"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&rdfs;Literal"/>
+                    <rdf:Description rdf:about="&xsd;string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#variableTag -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;variableTag">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;Variable"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&rdfs;Literal"/>
+                    <rdf:Description rdf:about="&xsd;string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#variableType -->
+
+    <owl:DatatypeProperty rdf:about="&Ontology1352127234683;variableType">
+        <rdfs:domain rdf:resource="&Ontology1352127234683;Variable"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&rdfs;Literal"/>
+                    <rdf:Description rdf:about="&xsd;string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#DataChoice -->
+
+    <owl:Class rdf:about="&Ontology1352127234683;DataChoice"/>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#DataRecord -->
+
+    <owl:Class rdf:about="&Ontology1352127234683;DataRecord">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#Place -->
+
+    <owl:Class rdf:about="&Ontology1352127234683;Place">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#Variable -->
+
+    <owl:Class rdf:about="&Ontology1352127234683;Variable">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#elemType -->
+
+    <owl:Class rdf:about="&Ontology1352127234683;elemType"/>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#item -->
+
+    <owl:Class rdf:about="&Ontology1352127234683;item">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#ATer -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;ATer">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&rdfs;Literal">Hysteresis to turn on/off other level of power</variableDescription>
+        <variableSymbol rdf:datatype="&rdfs;Literal">\Delta T_{ER}</variableSymbol>
+        <variableType rdf:datatype="&rdfs;Literal">user</variableType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#CERH -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;CERH">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableSymbol rdf:datatype="&xsd;string">CERH</variableSymbol>
+        <variableDescription rdf:datatype="&xsd;string">Electrical power</variableDescription>
+        <variableType rdf:datatype="&xsd;string">user</variableType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#CLP-ER-i -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;CLP-ER-i">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableSymbol rdf:datatype="&rdfs;Literal">C_{LP-ER-i}</variableSymbol>
+        <variableDescription rdf:datatype="&rdfs;Literal">Electrical power of each level of power</variableDescription>
+        <variableType rdf:datatype="&rdfs;Literal">user</variableType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#ELECTRIC_RADIANT_HEATING002 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;ELECTRIC_RADIANT_HEATING002">
+        <rdf:type rdf:resource="&Ontology1352127234683;item"/>
+        <equipmentType rdf:datatype="&rdfs;Literal">ELECTRIC_RADIANT_HEATING</equipmentType>
+        <theorical_variable rdf:resource="&Ontology1352127234683;CERH"/>
+        <location rdf:resource="&Ontology1352127234683;ROOM004"/>
+        <theorical_variable rdf:resource="&Ontology1352127234683;SHM-ERH"/>
+        <theorical_variable rdf:resource="&Ontology1352127234683;TH-ERH"/>
+        <theorical_variable rdf:resource="&Ontology1352127234683;TH-ERH,MAX"/>
+        <theorical_variable rdf:resource="&Ontology1352127234683;TH-ERH,MIN"/>
+        <theorical_variable rdf:resource="&Ontology1352127234683;Troom_air_db"/>
+        <datarecord rdf:resource="&Ontology1352127234683;dataRecord2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#RADIATOR001 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;RADIATOR001">
+        <rdf:type rdf:resource="&Ontology1352127234683;item"/>
+        <equipmentType rdf:datatype="&rdfs;Literal">ELECTRIC RADIATORS</equipmentType>
+        <variable_name rdf:resource="&Ontology1352127234683;ATer"/>
+        <variable_name rdf:resource="&Ontology1352127234683;CLP-ER-i"/>
+        <location rdf:resource="&Ontology1352127234683;ROOM001"/>
+        <variable_name rdf:resource="&Ontology1352127234683;SHM-ER"/>
+        <variable_name rdf:resource="&Ontology1352127234683;SLP-ERpi"/>
+        <variable_name rdf:resource="&Ontology1352127234683;Th-er"/>
+        <variable_name rdf:resource="&Ontology1352127234683;Th-er,max"/>
+        <variable_name rdf:resource="&Ontology1352127234683;Th-er,min"/>
+        <variable_name rdf:resource="&Ontology1352127234683;TroomAirdb"/>
+        <datarecord rdf:resource="&Ontology1352127234683;datarecord1"/>
+        <variable_name rdf:resource="&Ontology1352127234683;per"/>
+        <variable_name rdf:resource="&Ontology1352127234683;ter"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#ROOM001 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;ROOM001">
+        <rdf:type rdf:resource="&Ontology1352127234683;Place"/>
+        <placeID rdf:datatype="&rdfs;Literal">001</placeID>
+        <placeDescription rdf:datatype="&rdfs;Literal">Room in the 4 floor</placeDescription>
+        <country rdf:datatype="&rdfs;Literal">Stavanger</country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#ROOM002 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;ROOM002">
+        <rdf:type rdf:resource="&Ontology1352127234683;Place"/>
+        <placeID rdf:datatype="&rdfs;Literal">002</placeID>
+        <placeDescription rdf:datatype="&rdfs;Literal">Room next to the 001</placeDescription>
+        <country rdf:datatype="&rdfs;Literal">Stavanger</country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#ROOM003 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;ROOM003">
+        <rdf:type rdf:resource="&Ontology1352127234683;Place"/>
+        <placeID rdf:datatype="&rdfs;Literal">003</placeID>
+        <placeDescription rdf:datatype="&rdfs;Literal">My room</placeDescription>
+        <country rdf:datatype="&rdfs;Literal">Seville</country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#ROOM004 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;ROOM004">
+        <rdf:type rdf:resource="&Ontology1352127234683;Place"/>
+        <placeID rdf:datatype="&rdfs;Literal">004</placeID>
+        <placeDescription rdf:datatype="&rdfs;Literal">Jose&#39;s room</placeDescription>
+        <country rdf:datatype="&rdfs;Literal">Seville</country>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#SHM-ER -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;SHM-ER">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&rdfs;Literal">On/off radiators</variableDescription>
+        <variableSymbol rdf:datatype="&rdfs;Literal">S_{HM-ER}</variableSymbol>
+        <variableTag rdf:datatype="&rdfs;Literal">box, building, floor, room</variableTag>
+        <variableType rdf:datatype="&rdfs;Literal">controlled</variableType>
+        <variableMetric rdf:datatype="&rdfs;Literal">specific.control.electric_radiators.on_off_radiators</variableMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#SHM-ERH -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;SHM-ERH">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&xsd;string">On/off radiant heating</variableDescription>
+        <variableSymbol rdf:datatype="&xsd;string">SHM-ERH</variableSymbol>
+        <variableTag rdf:datatype="&xsd;string">box, building, area, equipment_id</variableTag>
+        <variableType rdf:datatype="&xsd;string">controlled</variableType>
+        <variableMetric rdf:datatype="&xsd;string">specific.control.electric_radiant_heating.on_off</variableMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#SLP-ERpi -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;SLP-ERpi">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&rdfs;Literal">Level of power</variableDescription>
+        <variableSymbol rdf:datatype="&rdfs;Literal">S_{LP-ER} (p1,…,p5)</variableSymbol>
+        <variableTag rdf:datatype="&rdfs;Literal">box, building, floor, room</variableTag>
+        <variableType rdf:datatype="&rdfs;Literal">controlled</variableType>
+        <variableMetric rdf:datatype="&rdfs;Literal">specific.control.electric_radiators.level_of_power</variableMetric>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#TH-ERH -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;TH-ERH">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&xsd;string">Set point temperature</variableDescription>
+        <variableSymbol rdf:datatype="&xsd;string">TH-ERH</variableSymbol>
+        <variableType rdf:datatype="&xsd;string">user</variableType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#TH-ERH,MAX -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;TH-ERH,MAX">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&xsd;string">Hysteresis over set point</variableDescription>
+        <variableSymbol rdf:datatype="&xsd;string">TH-ERH,MAX</variableSymbol>
+        <variableType rdf:datatype="&xsd;string">user</variableType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#TH-ERH,MIN -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;TH-ERH,MIN">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&xsd;string">Hysteresis down set point</variableDescription>
+        <variableSymbol rdf:datatype="&xsd;string">TH-ERH,MIN</variableSymbol>
+        <variableType rdf:datatype="&xsd;string">user</variableType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#Th-er -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;Th-er">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&rdfs;Literal">Set point temperature</variableDescription>
+        <variableSymbol rdf:datatype="&rdfs;Literal">T_{H-ER}</variableSymbol>
+        <variableType rdf:datatype="&rdfs;Literal">user</variableType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#Th-er,max -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;Th-er,max">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&rdfs;Literal">Hysteresis over set point</variableDescription>
+        <variableSymbol rdf:datatype="&rdfs;Literal">T_{H-ER, MAX}</variableSymbol>
+        <variableType rdf:datatype="&rdfs;Literal">user</variableType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#Th-er,min -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;Th-er,min">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&rdfs;Literal">Hysteresis down set point</variableDescription>
+        <variableSymbol rdf:datatype="&rdfs;Literal">T_{H-ER, MIN}</variableSymbol>
+        <variableType rdf:datatype="&rdfs;Literal">user</variableType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#TroomAirdb -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;TroomAirdb">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&rdfs;Literal">Indoor air temperature</variableDescription>
+        <variableSymbol rdf:datatype="&rdfs;Literal">T_{room air (db)}</variableSymbol>
+        <variableTag rdf:datatype="&rdfs;Literal">box, building, floor, room</variableTag>
+        <variableMetric rdf:datatype="&rdfs;Literal">general.indoor.air_temp</variableMetric>
+        <variableType rdf:datatype="&rdfs;Literal">monitored</variableType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#Troom_air_db -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;Troom_air_db">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&xsd;string">Snow/Ice sensor</variableDescription>
+        <variableSymbol rdf:datatype="&xsd;string">Troom_air_(db)</variableSymbol>
+        <variableType rdf:datatype="&xsd;string">monitored</variableType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#dataChoice1 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;dataChoice1">
+        <rdf:type rdf:resource="&Ontology1352127234683;DataChoice"/>
+        <name rdf:datatype="&rdfs;Literal">Room Comfort</name>
+        <item rdf:resource="&Ontology1352127234683;ELECTRIC_RADIANT_HEATING002"/>
+        <item rdf:resource="&Ontology1352127234683;RADIATOR001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#dataRecord2 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;dataRecord2">
+        <rdf:type rdf:resource="&Ontology1352127234683;DataRecord"/>
+        <unit rdf:datatype="&rdfs;Literal">--</unit>
+        <timestamp rdf:datatype="&rdfs;Literal">2007-11-09 T 11:20 UTC</timestamp>
+        <quantity rdf:datatype="&rdfs;Literal">ICE!</quantity>
+        <sensor_name rdf:datatype="&rdfs;Literal">SENSOR2</sensor_name>
+        <variable_name rdf:resource="&Ontology1352127234683;Troom_air_db"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#datarecord1 -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;datarecord1">
+        <rdf:type rdf:resource="&Ontology1352127234683;DataRecord"/>
+        <quantity rdf:datatype="&rdfs;Literal">10</quantity>
+        <timestamp rdf:datatype="&rdfs;Literal">2005-10-30 T 10:45 UTC</timestamp>
+        <unit rdf:datatype="&rdfs;Literal">Celsious</unit>
+        <sensor_name rdf:datatype="&rdfs;Literal">SENSOR001</sensor_name>
+        <variable_name rdf:resource="&Ontology1352127234683;TroomAirdb"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#per -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;per">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&rdfs;Literal">Number of level of power</variableDescription>
+        <variableSymbol rdf:datatype="&rdfs;Literal">P_{ER}</variableSymbol>
+        <variableType rdf:datatype="&rdfs;Literal">user</variableType>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#room_comfort -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;room_comfort">
+        <rdf:type rdf:resource="&Ontology1352127234683;elemType"/>
+        <dataChoice rdf:resource="&Ontology1352127234683;dataChoice1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.sensors.uis.no/ontologies/Ontology1352127234683.owl#ter -->
+
+    <owl:NamedIndividual rdf:about="&Ontology1352127234683;ter">
+        <rdf:type rdf:resource="&Ontology1352127234683;Variable"/>
+        <variableDescription rdf:datatype="&rdfs;Literal">Sample time to change level of power</variableDescription>
+        <variableSymbol rdf:datatype="&rdfs;Literal">t_{ER}</variableSymbol>
+        <variableType rdf:datatype="&rdfs;Literal">user</variableType>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

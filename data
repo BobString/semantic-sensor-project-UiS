@@ -1,0 +1,11 @@
+!ELECTRIC BOILER
+%user
+tEB#Sample time to change level of power
+pEB#Number of level of power
+TWH-EB#Set point temperature
+TWH-EB,MAX#Hysteresis over set point
+%monitored
+Twater supply-EB#Supply water temperature#specific.monitor.electric_boiler.supply_water_temp#box, building, equipment_id
+Qw-EB#Water flow#specific.monitor.electric_boiler.water_flow#box, building, equipment_id
+%controlled
+SHM-ERH#On/off radiant heating#specific.control.electric_radiant_heating.on_off#box, building, area, equipment_id

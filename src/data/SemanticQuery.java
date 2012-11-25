@@ -1,8 +1,7 @@
 package data;
 
 import java.io.DataInputStream;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
+import java.io.InputStream;
 
 import org.mindswap.pellet.jena.PelletReasonerFactory;
 
@@ -21,25 +20,29 @@ import com.hp.hpl.jena.rdf.model.ModelFactory;
  */
 public class SemanticQuery {
 
+	public SemanticQuery() {
+
+	}
+
 	/**
 	 * 
 	 * @param query
 	 * @return
 	 */
-	public static String runQuery(String s) {
+	public String execQuery(String s) {
 
 		OntModel m = ModelFactory
 				.createOntologyModel(PelletReasonerFactory.THE_SPEC);
-		FileInputStream fis;
 		try {
-			fis = new FileInputStream("buildingSensors.owl");
-			DataInputStream in = new DataInputStream(fis);
-			m.read(in, "");
-		} catch (FileNotFoundException e) {
+			InputStream fis;
+			fis = getClass().getResourceAsStream("finalBuildingSensors.owl");
+			DataInputStream input = new DataInputStream(fis);
+			m.read(input, "");
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		Query q = QueryFactory.create(s);
-		QueryExecution qe = SparqlDLExecutionFactory.create(q, m);
+		Query query = QueryFactory.create(s);
+		QueryExecution qe = SparqlDLExecutionFactory.create(query, m);
 		ResultSet rs = qe.execSelect();
 		System.out.println();
 		return ResultSetFormatter.asText(rs);
